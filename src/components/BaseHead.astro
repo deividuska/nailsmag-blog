@@ -1,0 +1,70 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import '../styles/global.css';
+import { SITE_TITLE } from '../consts';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+	ogTitle?: string;
+	ogDescription?: string;
+	twitterTitle?: string;
+	twitterDescription?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Default OG image - you can replace this with your own
+const defaultImage = '/favicon.svg';
+const { title, description, image = defaultImage, ogTitle, ogDescription, twitterTitle, twitterDescription } = Astro.props;
+const ogImage = image.startsWith('http') ? image : new URL(image, Astro.site).toString();
+
+// Use specific social titles/descriptions or fall back to main ones
+const finalOgTitle = ogTitle || title;
+const finalOgDescription = ogDescription || description;
+const finalTwitterTitle = twitterTitle || finalOgTitle;
+const finalTwitterDescription = twitterDescription || finalOgDescription;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="google-adsense-account" content="ca-pub-8209467117735544" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link
+	rel="alternate"
+	type="application/rss+xml"
+	title={SITE_TITLE}
+	href={new URL('rss.xml', Astro.site)}
+/>
+<meta name="generator" content={Astro.generator} />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={finalOgTitle} />
+<meta property="og:description" content={finalOgDescription} />
+<meta property="og:image" content={ogImage} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={finalTwitterTitle} />
+<meta property="twitter:description" content={finalTwitterDescription} />
+<meta property="twitter:image" content={ogImage} />
