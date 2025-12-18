@@ -191,8 +191,8 @@ export async function getPages() {
 
 export async function getMenu(menuId) {
   try {
-    // Try the provided menu ID first, then fallback to the other one
-    const menuIds = menuId ? [menuId, menuId === 2 ? 4 : 2] : [2, 4];
+    // Try the provided menu ID first, then fallback to default (3 = Main Menu)
+    const menuIds = menuId ? [menuId, 3] : [3];
     
     for (const id of menuIds) {
       const response = await fetch(`${WP_BASE_URL}/wp-json/menus/v1/menus/${id}`);
