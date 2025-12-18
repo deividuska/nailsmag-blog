@@ -1,6 +1,6 @@
 const WP_API_URL = import.meta.env.WP_API_URL || 'https://wp.nailsmag.co.uk/wp-json/wp/v2';
 const WP_BASE_URL = WP_API_URL.replace('/wp-json/wp/v2', '');
-const EASY_IO_CDN = 'enbxd79stev.exactdn.com';
+const EASY_IO_CDN = 'ew3oppskfjd.exactdn.com';
 
 // Number of posts per page - change this to show more/less posts
 export const POSTS_PER_PAGE = 9;
