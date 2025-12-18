@@ -30,7 +30,7 @@ if (currentPage === 1) {
 
 const { posts, totalPages, totalPosts } = await getPosts(currentPage, POSTS_PER_PAGE);
 const acfOptions = await getACFOptions();
-const homepageTitle = acfOptions.homepage_title || 'Naujausi įrašai';
+const homepageTitle = acfOptions.homepage_title || 'Latest Posts';
 
 // If no posts found for this page, redirect to home
 if (posts.length === 0) {
@@ -39,9 +39,9 @@ if (posts.length === 0) {
 ---
 
 <!doctype html>
-<html lang="lt">
+<html lang="en">
 	<head>
-		<BaseHead title={`${SITE_TITLE} - Puslapis ${currentPage}`} description={SITE_DESCRIPTION} />
+		<BaseHead title={`${SITE_TITLE} - Page ${currentPage}`} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
@@ -91,7 +91,7 @@ if (posts.length === 0) {
 								</h2>
 								
 								<time class="text-sm text-gray-500 mb-4 block font-medium">
-									{new Date(post.date).toLocaleDateString('lt-LT', { 
+									{new Date(post.date).toLocaleDateString('en-GB', { 
 										year: 'numeric', 
 										month: 'long', 
 										day: 'numeric' 
@@ -104,7 +104,7 @@ if (posts.length === 0) {
 									href={`/blog/${post.slug}`}
 									class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors group"
 								>
-									Skaityti daugiau
+									Read more
 									<svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
 									</svg>
@@ -117,14 +117,14 @@ if (posts.length === 0) {
 
 			{/* Pagination */}
 			{totalPages > 1 && (
-				<nav class="flex justify-center items-center gap-2 mt-12" aria-label="Puslapių navigacija">
+				<nav class="flex justify-center items-center gap-2 mt-12" aria-label="Page navigation">
 					{/* Previous button */}
 					{currentPage > 1 && (
 						<a 
 							href={currentPage === 2 ? '/' : `/page/${currentPage - 1}`} 
 							class="px-4 py-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
 						>
-							← Ankstesnis
+							← Previous
 						</a>
 					)}
 
@@ -149,7 +149,7 @@ if (posts.length === 0) {
 							href={`/page/${currentPage + 1}`} 
 							class="px-4 py-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
 						>
-							Kitas →
+							Next →
 						</a>
 					)}
 				</nav>

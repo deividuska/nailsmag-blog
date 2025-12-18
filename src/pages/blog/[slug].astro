@@ -37,7 +37,7 @@ const readingTime = Math.ceil(wordCount / 200);
 ---
 
 <!doctype html>
-<html lang="lt">
+<html lang="en">
 	<head>
 		<BaseHead 
 			title={seoTitle} 
@@ -78,14 +78,14 @@ const readingTime = Math.ceil(wordCount / 200);
 					
 					<div class="flex items-center gap-4 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
 						<time class="font-medium">
-							{new Date(post.date).toLocaleDateString('lt-LT', { 
+							{new Date(post.date).toLocaleDateString('en-GB', { 
 								year: 'numeric', 
 								month: 'long', 
 								day: 'numeric' 
 							})}
 						</time>
 						<span>•</span>
-						<span>{readingTime} min skaitymo</span>
+						<span>{readingTime} min read</span>
 					</div>
 					
 					<div class="prose prose-lg mx-auto" set:html={post.content.rendered} />
@@ -99,7 +99,7 @@ const readingTime = Math.ceil(wordCount / 200);
 				<svg class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
 				</svg>
-				Atgal į pradžią
+				Back to home
 			</a>
 		</main>
 		<Footer />
