@@ -1,0 +1,278 @@
+[
+    {
+        "key": "group_6925ca3ccf828",
+        "title": "Site Settings",
+        "fields": [
+            {
+                "key": "field_6925ca3c86a78",
+                "label": "Homepage Title",
+                "name": "homepage_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_promo_banner_1_heading",
+                "label": "Promo Banner 1",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_promo_image_1",
+                "label": "Promo Image 1",
+                "name": "promo_image_1",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Square image recommended (e.g., 256x256 or 512x512)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_promo_text_1",
+                "label": "Promo Text 1",
+                "name": "promo_text_1",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text to display in the center of the image (optional)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": 50,
+                "allow_in_bindings": 0,
+                "placeholder": "e.g., Shop Now",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_promo_link_1",
+                "label": "Promo Link 1",
+                "name": "promo_link_1",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "URL to link to when clicking the promo image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": "https://"
+            },
+            {
+                "key": "field_promo_link_1_new_tab",
+                "label": "Open in New Tab",
+                "name": "promo_link_1_new_tab",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Open link in new tab",
+                "default_value": 0,
+                "allow_in_bindings": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_promo_banner_2_heading",
+                "label": "Promo Banner 2",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_promo_image_2",
+                "label": "Promo Image 2",
+                "name": "promo_image_2",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Square image recommended (e.g., 256x256 or 512x512)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
+            },
+            {
+                "key": "field_promo_text_2",
+                "label": "Promo Text 2",
+                "name": "promo_text_2",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text to display in the center of the image (optional)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": 50,
+                "allow_in_bindings": 0,
+                "placeholder": "e.g., Shop Now",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_promo_link_2",
+                "label": "Promo Link 2",
+                "name": "promo_link_2",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "URL to link to when clicking the promo image",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "placeholder": "https://"
+            },
+            {
+                "key": "field_promo_link_2_new_tab",
+                "label": "Open in New Tab",
+                "name": "promo_link_2_new_tab",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Open link in new tab",
+                "default_value": 0,
+                "allow_in_bindings": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "site-settings"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": ""
+    },
+    {
+        "key": "ui_options_page_6925ca535f50f",
+        "title": "Site Settings",
+        "active": true,
+        "menu_order": 0,
+        "page_title": "Site Settings",
+        "menu_slug": "site-settings",
+        "parent_slug": "none",
+        "advanced_configuration": false,
+        "icon_url": "",
+        "menu_title": "",
+        "position": null,
+        "redirect": false,
+        "description": "",
+        "menu_icon": [],
+        "update_button": "Update",
+        "updated_message": "Options Updated",
+        "capability": "edit_posts",
+        "data_storage": "options",
+        "post_id": "",
+        "autoload": false
+    }
+]
