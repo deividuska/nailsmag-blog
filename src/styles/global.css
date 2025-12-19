@@ -61,13 +61,13 @@
 }
 
 .prose a {
-	color: #EFE7E2;
+	color: #EED0C5;
 	text-decoration: underline;
 	font-weight: 500;
 }
 
 .prose a:hover {
-	color: #d4ccc7;
+	color: #d4b5aa;
 }
 
 .prose strong {
@@ -189,11 +189,11 @@ body {
 
 /* Global link colors */
 a {
-	color: #EFE7E2;
+	color: #EED0C5;
 }
 
 a:hover {
-	color: #d4ccc7;
+	color: #d4b5aa;
 }
 
 .sr-only {
