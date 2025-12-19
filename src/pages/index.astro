@@ -20,10 +20,51 @@ const currentPage = 1;
 	</head>
 	<body>
 		<Header />
-		<main class="container mx-auto px-4 py-16 max-w-6xl">
-			<h1 class="text-3xl font-bold text-center mb-12 text-gray-900">{homepageTitle}</h1>
-			
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+		<main class="w-full px-4 py-16">
+			<div class="flex flex-col lg:flex-row gap-6 max-w-[1600px] mx-auto">
+				<!-- Left Promotional Banners -->
+				<aside class="hidden lg:flex flex-col gap-6 w-64 flex-shrink-0">
+					{acfOptions.promo_image_1?.url && (
+						<a 
+							href={acfOptions.promo_link_1 || '#'}
+							class="block aspect-square overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"
+							target={acfOptions.promo_link_1_new_tab ? '_blank' : '_self'}
+							rel={acfOptions.promo_link_1_new_tab ? 'noopener noreferrer' : undefined}
+						>
+							<img 
+								src={toEasyIOUrl(acfOptions.promo_image_1.url)} 
+								alt={acfOptions.promo_image_1.alt || 'Promotional banner'}
+								class="w-full h-full object-cover"
+								loading="lazy"
+								width="256"
+								height="256"
+							/>
+						</a>
+					)}
+					{acfOptions.promo_image_2?.url && (
+						<a 
+							href={acfOptions.promo_link_2 || '#'}
+							class="block aspect-square overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"
+							target={acfOptions.promo_link_2_new_tab ? '_blank' : '_self'}
+							rel={acfOptions.promo_link_2_new_tab ? 'noopener noreferrer' : undefined}
+						>
+							<img 
+								src={toEasyIOUrl(acfOptions.promo_image_2.url)} 
+								alt={acfOptions.promo_image_2.alt || 'Promotional banner'}
+								class="w-full h-full object-cover"
+								loading="lazy"
+								width="256"
+								height="256"
+							/>
+						</a>
+					)}
+				</aside>
+
+				<!-- Main Content -->
+				<div class="flex-1">
+					<h1 class="text-3xl font-bold text-center mb-12 text-gray-900">{homepageTitle}</h1>
+					
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 				{posts.map((post, index) => {
 					// Use medium_large size (max 768px) for better performance
 					const featuredImageRaw = post._embedded?.['wp:featuredmedia']?.[0]?.media_details?.sizes?.medium_large?.source_url || post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
@@ -121,6 +162,8 @@ const currentPage = 1;
 					)}
 				</nav>
 			)}
+				</div>
+			</div>
 		</main>
 		<Footer />
 		<ScrollToTop />
