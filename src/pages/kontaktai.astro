@@ -153,8 +153,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				
 				<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 					<input type="hidden" name="access_key" value="e431420d-4771-4326-b578-6207c8d0c9d4" />
-					<input type="hidden" name="subject" value="Nauja žinutė iš exemigrantai.lt" />
-					<input type="hidden" name="from_name" value="Exemigrantai.lt kontaktų forma" />
+					<input type="hidden" name="subject" value="New message from nailsmag.co.uk" />
+					<input type="hidden" name="from_name" value="Nails Mag Contact Form" />
+					<input type="hidden" name="redirect" value="https://nailsmag.co.uk/contact?success=true" />
 					<input type="checkbox" name="botcheck" style="display: none;" />
 					
 					<div class="form-group">
@@ -195,7 +196,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				const formData = new FormData(form);
 				const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
 				const originalText = submitBtn.textContent;
-				submitBtn.textContent = 'Siunčiama...';
+				submitBtn.textContent = 'Sending...';
 				submitBtn.disabled = true;
 				
 				try {
